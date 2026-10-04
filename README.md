@@ -378,6 +378,9 @@ Demo Video:
 
 https://github.com/user-attachments/assets/23a698b3-aa38-4d4a-8373-d3991ce96106
 
+Whatsapp test message screenshot:<img width="816" height="810" alt="Screenshot 2026-10-04 164923" src="https://github.com/user-attachments/assets/aefaeb8a-6705-4c77-97ba-29badbe77e7c" />
+
+
 
 
 ⚠️ Disclaimer
