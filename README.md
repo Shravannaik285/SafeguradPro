@@ -203,7 +203,7 @@ The frontend communicates with the backend through HTTP requests.
 
 The AI analysis workflow works as follows:
 
-```text
+
 Upload Image
      ↓
 React Frontend
@@ -218,7 +218,7 @@ AI Analysis
      ↓
 Sign out
 
-7. 📱 WhatsApp Integration
+###7. 📱 WhatsApp Integration
 
 The inspection workflow was connected to the Meta WhatsApp Cloud API.
 
