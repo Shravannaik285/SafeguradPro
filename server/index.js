@@ -10,11 +10,15 @@ import reportRoutes from "./routes/reportRoutes.js";
 const app = express();
 
 app.use(cors({
-    origin: true,
+    origin:[
+        "http://localhost:5173",
+        "https://safeguardpro-f575f.firebaseapp.com"
+    ],
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
+app.options(/.*/, cors());
 app.use(express.json());
 app.use(express.static("public"));
 
