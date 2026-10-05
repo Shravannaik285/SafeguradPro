@@ -59,7 +59,7 @@ function Equipments(){
 
             // Send the new status to our backend
             const response = await fetch(
-                `http://localhost:5000/api/equipment/${id}`,
+                `https://safeguardpro.onrender.com/api/equipment/${id}`,
                 {
                     method:"PATCH",
                     headers:{
@@ -112,7 +112,7 @@ function Equipments(){
                 const token = await user.getIdToken();
 
                 const response = await fetch(
-                    "http://localhost:5000/api/equipment",
+                    "https://safeguardpro.onrender.com/api/equipment",
                     {
                         method: "GET",
                         headers: {
@@ -176,7 +176,7 @@ function Equipments(){
             const token=await user.getIdToken();
 
             const response=await fetch(
-                "http://localhost:5000/api/equipment",
+                "https://safeguardpro.onrender.com/api/equipment",
                 {
                     method:"POST",
                     headers: {

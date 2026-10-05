@@ -52,7 +52,7 @@ function AIReportAnalysis() {
       formData.append("image", file);
 
       const response = await fetch(
-        "http://localhost:5000/api/reports/analyze",
+        "https://safeguardpro.onrender.com/api/reports/analyze",
         {
           method: "POST",
           body: formData,

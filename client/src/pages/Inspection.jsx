@@ -51,7 +51,7 @@ function Inspection(){
 
             // Get equipment belonging to this user
             const response=await fetch(
-                "http://localhost:5000/api/equipment",
+                "https://safeguardpro.onrender.com/api/equipment",
                 {
                     method:"GET",
                     headers:{
@@ -110,7 +110,7 @@ function Inspection(){
                 return;
             }
             const token=await user.getIdToken();
-            const response=await fetch("http://localhost:5000/api/inspections",
+            const response=await fetch("https://safeguardpro.onrender.com/api/inspections",
                 {
                     method:"POST",
                     headers:{
