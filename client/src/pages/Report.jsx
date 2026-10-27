@@ -8,8 +8,10 @@ import {
 } from "react-icons/fa";
 
 import Navbar from '../components/Navbar.jsx';
+import { API_BASE_URL } from '../config/api.js';
 
 import { motion } from "framer-motion";
+
 
 function AIReportAnalysis() {
 
@@ -52,12 +54,13 @@ function AIReportAnalysis() {
       formData.append("image", file);
 
       const response = await fetch(
-        "https://safeguardpro.onrender.com/api/reports/analyze",
+        `${API_BASE_URL}/api/reports/analyze`,
         {
           method: "POST",
           body: formData,
         }
       );
+
 
       const data = await response.json();
 

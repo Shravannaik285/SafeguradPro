@@ -9,6 +9,7 @@ import { MdSensors } from 'react-icons/md';
 import { FaChevronRight } from 'react-icons/fa6';
 import { MdFireHydrantAlt } from "react-icons/md";
 import { auth }  from '../firebase.js';
+import { API_BASE_URL } from '../config/api.js';
 import { IoCall } from "react-icons/io5";
 import { mdiSprinklerFire,mdiWaterPump,mdiStorageTank } from '@mdi/js';
 import { FaTemperatureHigh } from "react-icons/fa";
@@ -59,7 +60,7 @@ function Equipments(){
 
             // Send the new status to our backend
             const response = await fetch(
-                `https://safeguardpro.onrender.com/api/equipment/${id}`,
+                `${API_BASE_URL}/api/equipment/${id}`,
                 {
                     method:"PATCH",
                     headers:{
@@ -112,7 +113,7 @@ function Equipments(){
                 const token = await user.getIdToken();
 
                 const response = await fetch(
-                    "https://safeguardpro.onrender.com/api/equipment",
+                    `${API_BASE_URL}/api/equipment`,
                     {
                         method: "GET",
                         headers: {
@@ -176,7 +177,7 @@ function Equipments(){
             const token=await user.getIdToken();
 
             const response=await fetch(
-                "https://safeguardpro.onrender.com/api/equipment",
+                `${API_BASE_URL}/api/equipment`,
                 {
                     method:"POST",
                     headers: {

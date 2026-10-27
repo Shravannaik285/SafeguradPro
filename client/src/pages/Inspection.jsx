@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import { auth } from '../firebase.js';
+import { API_BASE_URL } from '../config/api.js';
 import Navbar from '../components/Navbar.jsx';
 import { FaChevronDown } from 'react-icons/fa';
 import { FaArrowRight } from 'react-icons/fa';
@@ -51,7 +52,7 @@ function Inspection(){
 
             // Get equipment belonging to this user
             const response=await fetch(
-                "https://safeguardpro.onrender.com/api/equipment",
+                `${API_BASE_URL}/api/equipment`,
                 {
                     method:"GET",
                     headers:{
@@ -110,7 +111,7 @@ function Inspection(){
                 return;
             }
             const token=await user.getIdToken();
-            const response=await fetch("https://safeguardpro.onrender.com/api/inspections",
+            const response=await fetch(`${API_BASE_URL}/api/inspections`,
                 {
                     method:"POST",
                     headers:{

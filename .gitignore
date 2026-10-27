@@ -8,6 +8,7 @@ node_modules/
 
 # Firebase Admin credentials
 Firebasebackendkey.json
+.firebase/
 
 # Logs
 *.log
@@ -22,6 +23,7 @@ Thumbs.db
 # Build files
 dist/
 build/
+.vercel/
 
 # IDE files
 .vscode/
