@@ -35,14 +35,24 @@ app.use(async (req, res, next) => {
     next();
 });
 
+// Primary API routes
 app.use("/api/reports", reportRoutes);
 app.use("/api/equipment", equipmentRoutes);
 app.use("/api/inspections", inspectionRoutes);
+
+// Fallback routes in case proxy rewrites strip the /api prefix
+app.use("/reports", reportRoutes);
+app.use("/equipment", equipmentRoutes);
+app.use("/inspections", inspectionRoutes);
 
 // Health check endpoint
 app.get("/api/health", (req, res) => {
     res.status(200).json({ status: "ok", service: "Safeguard Pro API" });
 });
+app.get("/health", (req, res) => {
+    res.status(200).json({ status: "ok", service: "Safeguard Pro API" });
+});
+
 
 const PORT = process.env.PORT || 5000;
 

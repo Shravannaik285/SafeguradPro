@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyC7Z1374V_ncynKBcsm7TLtaEURNI4rJbw",
   authDomain: "safeguardpro-f575f.firebaseapp.com",
   projectId: "safeguardpro-f575f",
   storageBucket: "safeguardpro-f575f.firebasestorage.app",

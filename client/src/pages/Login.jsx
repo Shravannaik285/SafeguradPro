@@ -27,7 +27,13 @@ function Login() {
 
     }catch(error) {
       console.error("Google login error: ", error);
+      if (error.code === "auth/unauthorized-domain") {
+        alert("This domain is not authorized in Firebase! Please add your Vercel domain to Firebase Console > Authentication > Settings > Authorized domains.");
+      } else {
+        alert(error.message || "Login failed. Please try again.");
+      }
     }
+
 
   };
 
