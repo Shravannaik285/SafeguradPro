@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyC7Z1374V_ncynKBcsm7TLtaEURNI4rJbw",
-  authDomain: "safeguardpro-f575f.firebaseapp.com",
-  projectId: "safeguardpro-f575f",
-  storageBucket: "safeguardpro-f575f.firebasestorage.app",
-  messagingSenderId: "882978742452",
-  appId: "1:882978742452:web:8ea227988aa0846108f7e1",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyCoUh9-skB5jM3-RxG69uPFtUgbGflKqk8",
+  authDomain: "safeguardpro.firebaseapp.com",
+  projectId: "safeguardpro",
+  storageBucket: "safeguardpro.firebasestorage.app",
+  messagingSenderId: "118230714910",
+  appId: "1:118230714910:web:91e952bfc05dc95b367c0f",
 };
 
 const app = initializeApp(firebaseConfig);
